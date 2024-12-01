@@ -1,0 +1,151 @@
+/* Estilo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #6b95f1, #266ac4, #6b95f1); /* Fondo metálico */
+    color: #ffffff; /* Color de texto blanco para contrastar */
+    line-height: 1.6;
+}
+
+/* Header - Menú superior */
+header {
+    background: linear-gradient(45deg, #051933, #266ac4, #051933); /* Color principal */
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+/* Desaparece cuando hace scroll hacia abajo */
+header.hidden {
+    top: -100px; 
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #00A859;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para el menú */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 100px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.menu-item {
+    background: linear-gradient(45deg, #051933, #266ac4, #051933); /* Fondo metálico */
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+/* Efectos para la imagen */
+.menu-image {
+    width: 600px; 
+    height: 300px; 
+    object-fit: contain; 
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Transición y efectos cuando el contenedor .menu-item es hover */
+.menu-item:hover .menu-image {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.3); 
+}
+
+/* Estilos para los nombres de las gráficas */
+.graph-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.menu-item h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* Estilos para el botón */
+.button {
+    background: linear-gradient(45deg, #051933, #266ac4, #051933); /* Fondo metálico */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: linear-gradient(45deg, #051933, #006efe, #051933); /* Fondo metálico */
+}
+
+.back-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para las gráficas */
+iframe {
+    border-radius: 10px;
+}
+
+/* Pie de página fijo */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #1E3A5F;
+    color: white;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+

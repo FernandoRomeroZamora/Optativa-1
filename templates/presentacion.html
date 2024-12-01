@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación del Proyecto</title>
+
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            line-height: 1.6;
+            background: linear-gradient(45deg, #6b95f1, #266ac4, #6b95f1);
+            background-size: 400% 400%;
+            animation: gradientAnimation 5s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        /* Fondo de la página */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.example.com/path-to-your-image.jpg') center center no-repeat;
+            background-size: cover;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        /* Botón de ir al menú */
+        .center-btn {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Sección general */
+        .section {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px); /* Efecto de desenfoque en la sección */
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .subsection-title {
+            font-size: 1.6rem;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .card {
+            margin-top: 20px;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+        }
+
+        /* Estilo para enlaces */
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        /* Efectos para la imagen de fondo */
+        .background {
+            filter: blur(10px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Título de la presentación -->
+        <h2 class="title">Bienvenido a la presentación de mi proyecto</h2>
+        <p class="intro-text">Este proyecto está diseñado para mostrar diferentes gráficas a partir de datos de vehículos. A continuación, puedes ver un resumen y acceder al menú para ver todas las gráficas disponibles.</p>
+        
+        <!-- Botón para acceder al menú -->
+        <div class="center-btn">
+            <form action="/menu" method="get">
+                <button type="submit" class="btn">Ir al Menú de Gráficas</button>
+            </form>
+        </div>
+
+<!-- Sección de Introducción -->
+<section class="section">
+    <h3 class="section-title">Introducción</h3>
+    <div class="card">
+        <p>El presente análisis tiene como objetivo explorar el mercado de vehículos usados mediante el uso de herramientas de análisis de datos. A continuación, se destacan algunos puntos clave de este proyecto:</p>
+        
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>El análisis se centró en diversas características de los vehículos, como el tipo de combustible, transmisión, tamaño del motor y precio.</li>
+            <li>Se utilizó un conjunto de datos obtenido de diversas fuentes, incluyendo Kaggle, que proporcionó información detallada sobre vehículos usados, lo cual facilitó el análisis y visualización de patrones clave en el mercado.</li>
+            <li>Se emplearon diversas técnicas de análisis y visualización de datos, como Python y Plotly, para descubrir patrones que puedan ayudar a las empresas a tomar decisiones más informadas en cuanto a precios y segmentación de mercado.</li>
+            <li>El proyecto está orientado a proporcionar insights que puedan ser utilizados en estrategias comerciales, marketing y optimización de inventarios para el sector automotriz.</li>
+        </ul>
+
+        <p>Con este análisis, se pretende ofrecer una visión clara de cómo las diferentes variables afectan el precio, la eficiencia, el rendimiento y las tendencias en el mercado de vehículos usados, permitiendo a las empresas tomar decisiones más basadas en datos.</p>
+    </div>
+</section>
+
+
+        <!-- Sección de KPIs -->
+<!-- Sección de KPIs -->
+<section class="section">
+    <h3 class="section-title">KPIs</h3>
+    <div class="card">
+        <h4 class="subsection-title">Los siguientes KPIs (Indicadores Clave de Desempeño) fueron definidos y alineados con los objetivos estratégicos del análisis:</h4>
+
+        <h4 class="subsection-title">1. KPIs relacionados con la rentabilidad y competitividad</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Precio promedio por tipo de combustible y transmisión: Indica cuáles combinaciones de características tienen mayor impacto en el precio.</li>
+            <li>Kilometraje promedio por tipo de vehículo: Mide la eficiencia y ayuda a segmentar vehículos según el rendimiento.</li>
+            <li>Margen de precios por año de fabricación: Ayuda a evaluar tendencias de depreciación y valor residual.</li>
+        </ul>
+
+        <h4 class="subsection-title">2. KPIs enfocados en la eficiencia del inventario</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Cantidad de vehículos según tipo de transmisión: Determina la demanda relativa de vehículos automáticos frente a manuales.</li>
+            <li>Proporción de vehículos por rango de precios: Identifica segmentos de mercado con mayor oportunidad.</li>
+            <li>Relación entre potencia y tamaño del motor: Mide qué configuraciones son más atractivas para los consumidores y más comunes en el inventario.</li>
+        </ul>
+
+        <h4 class="subsection-title">3. KPIs orientados a las ventas y publicidad</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Promedio de precios por región (o segmento, si aplica): Ayuda a identificar patrones de mercado geográficos.</li>
+            <li>Comparativa de precios promedio entre vehículos diésel, gasolina e híbridos: Proporciona insights para enfocar estrategias de marketing según tipo de combustible.</li>
+            <li>Tasa de crecimiento de modelos recientes en el inventario: Indica si el negocio se está adaptando a las tendencias modernas del mercado.</li>
+        </ul>
+
+        <h4 class="subsection-title">4. KPIs para la visualización y toma de decisiones</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Interactividad en visualizaciones: Evaluar el porcentaje de gráficos interactivos utilizados frente a estáticos para mejorar la comprensión.</li>
+            <li>Precisión en predicciones de precios: Analizar los valores reales frente a los estimados con base en las características principales.</li>
+            <li>Tiempo de análisis de datos (en horas): Mide la eficiencia en la limpieza y transformación de datos para futuras optimizaciones.</li>
+        </ul>
+
+        <h4 class="subsection-title">Justificación de los KPIs:</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Estos indicadores permiten medir no solo el rendimiento y la eficiencia del inventario, sino también cómo las decisiones de precio, marketing y publicidad impactan la rentabilidad del negocio.</li>
+            <li>Cada KPI está diseñado para facilitar la acción estratégica basada en datos, permitiendo a la empresa abordar puntos críticos con mayor claridad.</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- Sección de Metodología -->
+<section class="section">
+    <h3 class="section-title">2. Metodología</h3>
+    <div class="card">
+        <h4 class="subsection-title">Fuentes de datos</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Se utilizó un dataset que incluye información sobre vehículos usados, tales como kilometraje, tamaño del motor, tipo de combustible, potencia y precio.</li>
+        </ul>
+
+        <h4 class="subsection-title">Limpieza y transformación de datos</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Se eliminaron unidades textuales como "kmpl" y "CC" de las columnas Mileage, Engine, y Power, extrayendo únicamente los valores numéricos.</li>
+            <li>Los valores faltantes en columnas clave fueron reemplazados utilizando la mediana para evitar sesgos.</li>
+            <li>La columna New_Price fue transformada para extraer valores en un formato numérico uniforme.</li>
+            <li>En total de 7252 datos de la base de datos lo redujimos a 300 datos, reduciéndolos a los coches más usados y más vendidos.</li>
+        </ul>
+
+        <h4 class="subsection-title">Enlaces de interés</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>El archivo .csv de los datos limpios se encuentra en el siguiente link: <a href="https://drive.google.com/drive/folders/1idZls1twx3Xgpv6GYR6gGUgQhanV31J0?usp=sharing" target="_blank">Google Drive</a></li>
+            <li>El dataset fue descargado en Kaggle: <a href="https://www.kaggle.com/datasets/ayushparwal2026/cars-dataset?resource=download" target="_blank">Kaggle</a></li>
+        </ul>
+
+        <h4 class="subsection-title">Herramientas utilizadas</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>RStudio (ggplot2): Para visualizaciones avanzadas.</li>
+            <li>DataWrapper: Para gráficos interactivos.</li>
+            <li>Python (Pandas, Plotly): Para gráficos interactivos.</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- Sección de Análisis de los Datos -->
+<section class="section">
+    <h3 class="section-title">3. Análisis de los Datos</h3>
+    <div class="card">
+        <h4 class="subsection-title">1. Kilometraje por Tipo de Combustible</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Se observó que los vehículos diésel tienen un mejor rendimiento en términos de kilometraje, seguidos por vehículos híbridos.</li>
+        </ul>
+
+        <h4 class="subsection-title">2. Relación entre Tamaño del Motor y Potencia</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Existe una correlación positiva; motores más grandes suelen tener mayor potencia, aunque con variabilidad según el tipo de combustible.</li>
+        </ul>
+
+        <h4 class="subsection-title">3. Distribución de Precios por Transmisión</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Los vehículos automáticos son significativamente más costosos en comparación con los manuales, aunque los manuales dominan en el mercado.</li>
+        </ul>
+
+        <h4 class="subsection-title">4. Precios por Año y Combustible</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Los vehículos más recientes y aquellos con combustibles alternativos (CNG o híbridos) muestran precios más altos.</li>
+        </ul>
+
+        <h4 class="subsection-title">Selección de Datos y Transformación</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Los datos seleccionados y transformados fueron justificados por su relevancia en los KPIs establecidos.</li>
+            <li>La normalización de columnas asegura consistencia y comparabilidad.</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- Sección de Conclusiones y Recomendaciones -->
+<section class="section">
+    <h3 class="section-title">5. Conclusiones y Recomendaciones</h3>
+    <div class="card">
+        <h4 class="subsection-title">Conclusiones</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>El tipo de combustible influye significativamente en la eficiencia, el precio y la percepción del valor del vehículo, destacando diferencias claras entre gasolina, diésel y alternativas.</li>
+            <li>Los vehículos con transmisión automática suelen asociarse con mayor potencia y precios más elevados, lo que los posiciona en segmentos más exclusivos, aunque su disponibilidad es más limitada.</li>
+            <li>El análisis de datos, combinado con visualizaciones claras, permite descubrir patrones clave en el mercado automotriz, facilitando decisiones estratégicas basadas en evidencia.</li>
+        </ul>
+
+        <h4 class="subsection-title">Recomendaciones</h4>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Implementar estrategias de marketing específicas para promocionar, por ejemplo, tiempo de prueba del automóvil que garantizará el uso de vehículos con alto kilometraje en sectores enfocados en ahorro y eficiencia.</li>
+            <li>Enfocarse en vehículos automáticos al atender mercados premium, resaltando sus características de comodidad, potencia y exclusividad.</li>
+            <li>Utilizar modelos predictivos basados en datos históricos para ajustar precios y anticiparse a tendencias futuras del mercado, optimizando la competitividad.</li>
+        </ul>
+
+        <h4 class="subsection-title">Conclusión General del Proyecto</h4>
+        <p>El análisis realizado sobre el mercado de vehículos usados, a partir de los datos recopilados y las visualizaciones generadas, ha proporcionado una comprensión profunda de las dinámicas que influyen en el precio, kilometraje, potencia y tipo de transmisión de los vehículos. A través de herramientas de análisis de datos y visualización como Python y Plotly, se ha podido identificar patrones importantes, como la relación entre el tipo de combustible y el precio, la eficiencia de los vehículos según su antigüedad y las diferencias entre los tipos de transmisión. Los resultados obtenidos sugieren que los vehículos automáticos, aunque más caros, tienden a estar asociados con una mayor potencia y comodidad, lo que los hace ideales para mercados premium. Además, la eficiencia en el consumo de combustible ha mejorado con el tiempo, lo que refleja la evolución tecnológica en la industria automotriz. En general, este proyecto ha demostrado la importancia de contar con datos limpios y análisis detallados para tomar decisiones informadas en el sector automotriz, optimizando estrategias de marketing, fijación de precios y segmentación de mercado. Las recomendaciones planteadas, basadas en las observaciones del análisis, permitirán una mejor orientación de las estrategias comerciales, ayudando a las empresas a posicionarse mejor en un mercado competitivo y en constante evolución.</p>
+    </div>
+</section>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Gráfica 2{% endblock %}
+
+{% block content %}
+<div style="margin-top: 80px; font-family: 'Arial', sans-serif; color: #003366; line-height: 1.6;">
+    <h2 style="text-align: center; font-size: 2rem; color: #003366; margin-bottom: 20px;">Gráfica 2</h2>
+    <p style="text-align: center; font-size: 1.2rem; margin-bottom: 10px; color: #ffffff;">
+        Distribución del kilometraje por tipo de combustible en vehículos
+    </p>
+    <div style="max-width: 800px; margin: 0 auto; background: #ffffff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden; padding: 20px;">
+        <div style="position:relative; width:100%; height:0; padding-bottom:96.25%; overflow:hidden; border: 1px solid #ccc; border-radius: 5px;">
+            <iframe 
+                src="https://datawrapper.dwcdn.net/pifBx/2/" 
+                title="Gráfica interactiva" 
+                style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;" 
+                scrolling="no">
+            </iframe>
+        </div>
+    </div>
+    <p style="max-width: 800px; margin: 20px auto 0; font-size: 1rem; color: #ffffff; text-align: justify;">
+        La gráfica muestra cómo se distribuye el kilometraje total entre los diferentes tipos de combustible utilizados en los vehículos. El diesel sobresale significativamente, representando la mayor parte del kilometraje total, lo que refleja su predominio como opción eficiente o más popular en esta muestra. Por otro lado, la gasolina ocupa el segundo lugar, indicando que sigue siendo una alternativa común, aunque menos predominante en comparación con el diesel. Los combustibles CNG y LPG presentan una participación mínima en el kilometraje total, lo que sugiere que estos tipos de energía son menos utilizados o tienen una aplicación más limitada en esta población de vehículos. En conjunto, los datos revelan una fuerte dependencia de los combustibles tradicionales como el diesel y la gasolina, mientras que los combustibles alternativos tienen una presencia marginal.
+    </p>
+    <div class="back-button" style="text-align: center; margin-top: 20px;">
+        <a href="/menu" class="button">
+            Volver al menú de gráficas
+        </a>
+    </div>
+</div>
+{% endblock %}
