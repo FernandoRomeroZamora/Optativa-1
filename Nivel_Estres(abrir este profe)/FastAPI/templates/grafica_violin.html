@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gráfico de Violín: Relación del Desempeño Académico de los Estudiantes con el Nivel de Estrés.</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Menu Principal</a></li>
+            <li><a href="/grafica_barras">Barras</a></li>
+            <li><a href="/histograma">Histograma</a></li>
+            <li><a href="/grafica_violin">Violín</a></li>
+            <li><a href="/grafica_pastel">Pastel</a></li>
+            <li><a href="/grafica_dispersion">Dispersión</a></li>
+            <li><a href="/grafica_dispersion2">Dispersión 2</a></li>
+        </ul>
+    </nav>
+        <h2>Descripcion:<br><br>Gráfico de Violín que representa el Desempeño Académico de los Estudiantes con relación al Nivel de Estrés.</h2>
+        <img id="imagen"src="/static/violin.png" alt="barras">
+        <pre class="ventana">
+           <h2>Observaciones</h2>  
+            Se ha notado que hay una relación muy fuerte entre el nivel de estrés de los estudiantes
+            con su desempeño académico. Esto se confirma ya que la mayoría de estudiantes que tienen
+            buenas calificaciones tienen poca o nulo estrés, mientras que los que están mal 
+            académicamente tienen un nivel de estrés muy alto. Hay una posibilidad de que quizás 
+            sea por la carga de trabajo que tienen estos alumnos, se puede especular que es porque 
+            los profesores dejan demasiado o quizás porque los estudiantes dejan todo al final, 
+            para evitar esto se debería de tener un tiempo medio para entregar los trabajos y tareas 
+            a realizar y concientizar a los padres y maestros que les den seguimiento a los alumnos 
+            para que no generan tanto estrés y mejoren académicamente.  
+        </pre>
+        <h2 style="text-align: center;">Codigo Utilizado</h2> 
+       <pre class="ventana">
+plt.figure(figsize=(12, 6))
+sns.violinplot(data=df, x='nivel_estres', y='desempeño_academico', hue='nivel_estres', dodge=False, palette="pastel", inner="box")
+plt.title("Distribución del Desempeño Académico según Niveles de Estrés", fontsize=14)
+plt.xlabel("Nivel de Estrés", fontsize=12)
+plt.ylabel("Desempeño Académico", fontsize=12)
+plt.grid(axis='y', alpha=0.3)
+plt.tight_layout()
+plt.show()
+       </pre>
+</body>
+<footer>
+    <p>&copy; 2024 Tu Nombre</p>
+</footer>
+</html>

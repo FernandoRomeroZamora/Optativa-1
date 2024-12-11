@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gráfico de Barras: Nivel de Preocupación de Carrera Futura de los Estudiantes</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Menu Principal</a></li>
+            <li><a href="/grafica_barras">Barras</a></li>
+            <li><a href="/histograma">Histograma</a></li>
+            <li><a href="/grafica_violin">Violín</a></li>
+            <li><a href="/grafica_pastel">Pastel</a></li>
+            <li><a href="/grafica_dispersion">Dispersión</a></li>
+            <li><a href="/grafica_dispersion2">Dispersión 2</a></li>
+        </ul>
+    </nav>
+        <h2>Descripcion:<br><br>Gráfica de barras que representa el Nivel de Preocupación de Carrera Futura de los Estudiantes de Preparatoria en CDMX.</h2>
+        <img id="imagen"src="/static/barras.png" alt="barras">
+        <pre class="ventana">
+           <h2>Observaciones</h2>  
+
+            Se ha observado que más de 300 estudiantes no están tan preocupados por tener una carrera en el futuro o no 
+            saber que carrera tomar, sin embargo la mayor parte están entre estar medio-muy preocupados por no saber que 
+            carrera tomar o siquiera tomarla, lo que puede generar mucho estrés en los estudiantes y estar afectandolos 
+            académicamente lo que como efecto domino no ingresen a algunacarrera deseada por un promedio bajo. 
+            
+            Lo que se podría tomar como medida es que les den charlas algunos profesionales a los estudiantes sobre la 
+            carrera para que se den una idea de lo que realmente es y no solo suponer, también realizar tests vocacionales 
+            para saber qué es lo que más podría agradarles y de ahí elegir un ramo a estudiar. Todo esto incentivarlo desde 
+            que ingresen a la preparatoria para evitar que en los últimos 2 semestres no sepan que elegir y solo elijan algo 
+            para no dejar de estudiar queal final eso podría ser mucho más contraproducente porque si eligen una carreraque 
+            no les gusta, al final se estresan más y podrían generar ansiedad o inclusodepresión por no sentirse suficientes.    
+        </pre>
+        <h2 style="text-align: center;">Codigo Utilizado</h2> 
+       <pre class="ventana">
+    ggplot(estres_data, aes(x = preocupacion_carrera_futura, fill = as.factor(preocupacion_carrera_futura))) +
+        geom_bar() +
+        labs(title = "Nivel de Preocupación de Carrera Futura de los Estudiantes", 
+         x = "Preocupación por Carrera Futura", 
+         y = "Número de Estudiantes",
+         fill = "Nivel de Preocupación") +
+        theme_minimal()
+       </pre>
+</body>
+<footer>
+    <p>&copy; 2024 Tu Nombre</p>
+</footer>
+</html>

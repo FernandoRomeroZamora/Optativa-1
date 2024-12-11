@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gráfico de Pastel: Comparación de la presión arterial según el nivel de estrés</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Menu Principal</a></li>
+            <li><a href="/grafica_barras">Barras</a></li>
+            <li><a href="/histograma">Histograma</a></li>
+            <li><a href="/grafica_violin">Violín</a></li>
+            <li><a href="/grafica_pastel">Pastel</a></li>
+            <li><a href="/grafica_dispersion">Dispersión</a></li>
+            <li><a href="/grafica_dispersion2">Dispersión 2</a></li>
+        </ul>
+    </nav>
+        <h2>Descripcion:<br><br>Gráfica de Pastel que representa la Presión Arterial de los Estudiantes de Preparatoria en base al Nivel de Estrés.</h2>
+        <img id="imagen"src="/static/pastel.png" alt="barras">
+        <pre class="ventana">
+           <h2>Observaciones</h2>  
+           Se puede apreciar que el 46% de los estudiantes tienen una presión muy alta al punto de ser Hipertensión 
+           Leve/Grave gracias al estrés que tienen llegando incluso a ser crónico, deben de ir al médico para darles 
+           tratamiento y seguimiento para evitar que generen en el futuro problemas cardiovasculares. El 33.7% tienen 
+           una presión Normal alta lo cual no es muy grave aunque se debe tener cuidado para no generar Hipertensión y 
+           por último el 20.3% tienen una presión normal, por lo que generan poca o nada de estrés.  
+        </pre>
+        <h2 style="text-align: center;">Codigo Utilizado</h2> 
+       <pre class="ventana">
+# Agrupar los datos por nivel de estrés y calcular el promedio de presión arterial
+grouped_data = df.groupby('nivel_estres')['presion_arterial'].mean()
+
+# Paleta de colores pastel personalizada
+pastel_colors = ['#FFB6C1', '#FFDAB9', '#B0E0E6', '#98FB98', '#FFFACD']
+
+# Función para mostrar porcentaje y valor
+def autopct_format(pct, all_vals):
+    absolute = int(round(pct / 100. * sum(all_vals)))
+    return f"{pct:.1f}%\n({absolute})"
+
+# Crear gráfico de pastel
+plt.figure(figsize=(10, 7))
+plt.pie(
+    grouped_data,
+    labels=grouped_data.index,
+    autopct=lambda pct: autopct_format(pct, grouped_data),
+    startangle=90,
+    colors=pastel_colors,
+    wedgeprops={'edgecolor': 'black'}  # Borde negro para destacar
+)
+
+# Títulos y diseño
+plt.title('Comparación de la presión arterial según el nivel de estrés', fontsize=14, fontweight='bold')
+plt.axis('equal')  # Asegura que el gráfico sea circular
+plt.show()
+       </pre>
+</body>
+<footer>
+    <p>&copy; 2024 Tu Nombre</p>
+</footer>
+</html>
