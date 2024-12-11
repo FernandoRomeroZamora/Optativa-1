@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Histograma: Calidad de Sueño de los Estudiantes</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Menu Principal</a></li>
+            <li><a href="/grafica_barras">Barras</a></li>
+            <li><a href="/histograma">Histograma</a></li>
+            <li><a href="/grafica_violin">Violín</a></li>
+            <li><a href="/grafica_pastel">Pastel</a></li>
+            <li><a href="/grafica_dispersion">Dispersión</a></li>
+            <li><a href="/grafica_dispersion2">Dispersión 2</a></li>
+        </ul>
+    </nav>
+        <h2>Descripcion:<br><br>Histograma que representa la Calidad de Sueño de los Estudiantes</h2>
+        <img id="imagen"src="/static/histograma.png" alt="barras">
+        <pre class="ventana">
+           <h2>Observaciones</h2>  
+
+           Se puede apreciar en la gráfica que la mayoría de estudiantes (Más de 300 estudiantes) tienen una mala 
+           calidad de sueño durmiendo entre 3-4 horas, lo que está generandoles un nivel de estrés muy alto,
+           mientras que las personas que duermen entre 4-6.5 horas tienen un nivelde estrés moderado y las personas 
+           que duermen entre 6.5-9 horas son lasque generan menos o incluso no la tienen. 
+           
+           Por lo que podemos concluir que los estudiantes deberían dormir entre 6.5-9 horas para poder evitar 
+           generar estres, tambien es posible que baje su rendimiento académico por el sueño y falta de concentración, 
+           por lo que se debe concientizar desde casa que el descanso es algo primordial para cualquiera para poder 
+           rendir en lo académico y en la vida en general, además de detectar las razones por la que la calidad de 
+           sueño es baja.   
+        </pre>
+        <h2 style="text-align: center;">Codigo Utilizado</h2> 
+       <pre class="ventana">
+        ggplot(estres_data, aes(x = calidad_sueño, fill = as.factor(nivel_estres))) +
+        geom_histogram(binwidth = 1, position = "dodge", color = "black") +
+        labs(
+          title = "Comparativa de la Calidad de Sueño según el Nivel de Estrés",
+          x = "Calidad de Sueño",
+          y = "Número de Estudiantes",
+          fill = "Nivel de Estrés"
+        ) +
+        scale_fill_brewer(palette = "Set3") +
+        theme_minimal()
+       </pre>
+</body>
+<footer>
+    <p>&copy; 2024 Tu Nombre</p>
+</footer>
+</html>

@@ -1,20 +1,85 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Menú Principal</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Menu Principal</a></li>
+            <li><a href="/grafica_barras">Barras</a></li>
+            <li><a href="/histograma">Histograma</a></li>
+            <li><a href="/grafica_violin">Violín</a></li>
+            <li><a href="/grafica_pastel">Pastel</a></li>
+            <li><a href="/grafica_dispersion">Dispersión</a></li>
+            <li><a href="/grafica_dispersion2">Dispersión 2</a></li>
+        </ul>
+    </nav>
 
-{% block title %}Inicio{% endblock %}
+    <h1 id="titulo">Bienvenidos a Graficas Sobre Niveles de Estrés</h1>
+    <p id="menu">Selecciona el Grafico a observar</p>
 
-{% block content %}
-    <h2>Bienvenido a mi proyecto de gráficas</h2>
-    <p>Selecciona una gráfica del menú para visualizar.</p>
-    <form method="post" action="/enviar/">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <br>
-        <label for="comentario">Comentario:</label>
-        <textarea id="comentario" name="comentario" required></textarea>
-        <br>
-        <button type="submit">Enviar</button>
-    </form>
-    {% if mensaje %}
-        <p>{{ mensaje }}</p>
-    {% endif %}
-{% endblock %}
+    <!-- Galería de imágenes con mapas -->
+    <div class="image-grid">
+        <figure>
+            <img src="/static/barras.png" usemap="#mapaBarras" alt="Gráfico de Barras">
+            <map name="mapaBarras">
+                <area shape="rect" coords="0,0,400,300" href="/grafica_barras" alt="Gráfico de Barras">
+            </map>
+            <figcaption>Gráfico de Barras</figcaption>
+        </figure>
+
+        <figure>
+            <img src="/static/histograma.png" usemap="#mapaHistograma" alt="Histograma">
+            <map name="mapaHistograma">
+                <area shape="rect" coords="0,0,400,300" href="/histograma" alt="Histograma">
+            </map>
+            <figcaption>Histograma</figcaption>
+        </figure>
+
+        <figure>
+            <img src="/static/violin.png" usemap="#mapaViolin" alt="Gráfico de Violín">
+            <map name="mapaViolin">
+                <area shape="rect" coords="0,0,400,300" href="/grafica_violin" alt="Gráfico de Violín">
+            </map>
+            <figcaption>Gráfico de Violín</figcaption>
+        </figure>
+
+        <figure>
+            <img src="/static/pastel.png" usemap="#mapaPastel" alt="Gráfico de Pastel">
+            <map name="mapaPastel">
+                <area shape="rect" coords="0,0,400,300" href="/grafica_pastel" alt="Gráfico de Pastel">
+            </map>
+            <figcaption>Gráfico de Pastel</figcaption>
+        </figure>
+
+        <figure>
+            <img src="/static/dispersion.png" usemap="#mapaDispersion" alt="Gráfico de Dispersión">
+            <map name="mapaDispersion">
+                <area shape="rect" coords="0,0,400,300" href="/grafica_dispersion" alt="Gráfico de Dispersión">
+            </map>
+            <figcaption>Gráfico de Dispersión</figcaption>
+        </figure>
+
+        <figure>
+            <map name="mapaDispersion2">
+                <area shape="rect" coords="0,0,400,300" href="/grafica_dispersion2" alt="Gráfico de Dispersión 2">
+                <img src="/static/dispersion2.png" usemap="#mapaDispersion2" alt="Gráfico de Dispersión 2">
+            </map>
+            <figcaption>Gráfico de Dispersión 2</figcaption>
+        </figure>
+    </div>
+
+</body>
+<footer>
+    <p>&copy; 2024 Graficas Niveles_Estrés</p>
+</footer>
+</html>
+
+
